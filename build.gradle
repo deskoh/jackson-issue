@@ -1,7 +1,7 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '4.0.5'
-    // id 'org.springframework.boot' version '3.5.14'
+    // id 'org.springframework.boot' version '4.0.5'
+    id 'org.springframework.boot' version '3.5.14'
 }
 
 group = 'com.deskoh'
@@ -24,8 +24,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'tools.jackson.core:jackson-core:3.1.0'
-    implementation 'tools.jackson.core:jackson-databind:3.1.0'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.21.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.21.2'
     implementation 'com.fasterxml.jackson.core:jackson-annotations:2.21'
 
     // compileOnly 'org.projectlombok:lombok:1.18.44'

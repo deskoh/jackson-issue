@@ -12,21 +12,21 @@ Jackson 3 using custom deserializer of a JSON with nested object will throw an e
 
 
 ```txt
-tools.jackson.databind.DatabindException: class com.deskoh.entities.SourceSystem cannot be cast to class com.deskoh.entities.Project (com.deskoh.entities.SourceSystem and com.deskoh.entities.Project are in unnamed module of loader 'app')
+com.fasterxml.jackson.databind.DatabindException: class com.deskoh.entities.SourceSystem cannot be cast to class com.deskoh.entities.Project (com.deskoh.entities.SourceSystem and com.deskoh.entities.Project are in unnamed module of loader 'app')
  at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #119] (through reference chain: com.deskoh.entities.Project["assets"])
-	at app//tools.jackson.databind.DatabindException.wrapWithPath(DatabindException.java:111)
-	at app//tools.jackson.databind.deser.bean.BeanDeserializerBase.wrapAndThrow(BeanDeserializerBase.java:1936)
-	at app//tools.jackson.databind.deser.bean.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:654)
-	at app//tools.jackson.databind.deser.bean.BeanDeserializer.deserialize(BeanDeserializer.java:200)
-	at app//tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:266)
-	at app//tools.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2639)
-	at app//tools.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1622)
+	at app//com.fasterxml.jackson.databind.DatabindException.wrapWithPath(DatabindException.java:111)
+	at app//com.fasterxml.jackson.databind.deser.bean.BeanDeserializerBase.wrapAndThrow(BeanDeserializerBase.java:1936)
+	at app//com.fasterxml.jackson.databind.deser.bean.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:654)
+	at app//com.fasterxml.jackson.databind.deser.bean.BeanDeserializer.deserialize(BeanDeserializer.java:200)
+	at app//com.fasterxml.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:266)
+	at app//com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2639)
+	at app//com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1622)
 	at app//com.deskoh.entities.ProjectTest.given_project_can_deserialize(ProjectTest.java:24)
 Caused by: java.lang.ClassCastException: class com.deskoh.entities.SourceSystem cannot be cast to class com.deskoh.entities.Project (com.deskoh.entities.SourceSystem and com.deskoh.entities.Project are in unnamed module of loader 'app')
 	at com.deskoh.entities.AssetDeserializer.deserialize(AssetDeserializer.java:19)
 	at com.deskoh.entities.AssetDeserializer.deserialize(AssetDeserializer.java:13)
-	at tools.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:120)
-	at tools.jackson.databind.deser.bean.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:652)
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:120)
+	at com.fasterxml.jackson.databind.deser.bean.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:652)
 	... 5 more
 ```
 
