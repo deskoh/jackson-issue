@@ -53,7 +53,7 @@ However the deserialization will work and unit test pass if
     }
     ```
 
-1.  `AllArgsConstructor` or `SourceSystem` is removed, OR
+1.  `AllArgsConstructor` of `SourceSystem` is removed, OR
 
     > Note: Similar behaviour with lombok `@AllArgsConstructor` annotation
 
