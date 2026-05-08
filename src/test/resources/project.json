@@ -1,0 +1,10 @@
+{
+  "source": {
+    "name": "sourceA"
+  },
+  "assets": [{
+    "name": "asset1"
+  }, {
+    "name": "asset2"
+  }]
+}
