@@ -42,20 +42,17 @@ Project project = (Project) p.currentValue();
 
 However the deserialization will work and unit test pass if
 
-1. `org.springframework.boot` plugin is removed, OR
+1. `-parameters` flag is removed during compilation, OR
 
-    > Note: Spring Boot 3 or Spring Boot 4 will cause the same deserialization issue
+    > Note: Adding `org.springframework.boot` gradle plugin will enable the `-parameters` flag as well.
 
     ```diff
-    plugins {
-        id 'java'
-    -   id 'org.springframework.boot' version '4.0.5'
+    tasks.withType(JavaCompile).configureEach {
+    -    options.compilerArgs << "-parameters"
     }
     ```
 
 1.  `AllArgsConstructor` of `SourceSystem` is removed, OR
-
-    > Note: Similar behaviour with lombok `@AllArgsConstructor` annotation
 
     ```diff
     public class SourceSystem {

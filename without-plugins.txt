@@ -1,0 +1,81 @@
+Initialized native services in: C:\Users\desko\.gradle\native
+Initialized jansi services in: C:\Users\desko\.gradle\native
+Found daemon DaemonInfo{pid=16280, address=[f5197e62-92d9-4b8e-93c1-5cd4e9b53df4 port:55285, addresses:[/127.0.0.1]], state=Idle, lastBusy=1778415240527, context=DefaultDaemonContext[uid=06ecab0f-c7ee-4e02-b7e9-565a91ae53bc,javaHome=C:\Users\desko\.vscode\extensions\redhat.java-1.54.0-win32-x64\jre\21.0.10-win32-x86_64,javaVersion=21,javaVendor=Eclipse Adoptium,daemonRegistryDir=C:\Users\desko\.gradle\daemon,pid=16280,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=SG,-Duser.language=en,-Duser.variant]} however its context does not match the desired criteria.
+JVM is incompatible.
+Wanted: DaemonRequestContext{jvmCriteria=C:\Program Files\Eclipse Adoptium\jdk-21.0.3.9-hotspot (no JDK specified, using current Java home), daemonOpts=[-XX:MaxMetaspaceSize=384m, -XX:+HeapDumpOnOutOfMemoryError, -Xms256m, -Xmx512m, -Dfile.encoding=UTF-8, -Duser.country=SG, -Duser.language=en, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=06ecab0f-c7ee-4e02-b7e9-565a91ae53bc,javaHome=C:\Users\desko\.vscode\extensions\redhat.java-1.54.0-win32-x64\jre\21.0.10-win32-x86_64,javaVersion=21,javaVendor=Eclipse Adoptium,daemonRegistryDir=C:\Users\desko\.gradle\daemon,pid=16280,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=SG,-Duser.language=en,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 14464). The daemon log file: C:\Users\desko\.gradle\daemon\9.2.1\daemon-14464.out.log
+Starting 14th build in daemon [uptime: 11 mins 7.121 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 512 MiB, non-heap usage: 24% of 384 MiB]
+Using 16 worker leases.
+Operational build model parameters: {requiresToolingModels=false, parallelProjectExecution=false, configureOnDemand=false, configurationCache=false, configurationCacheParallelStore=false, configurationCacheParallelLoad=true, isolatedProjects=false, parallelProjectConfiguration=false, intermediateModelCache=false, parallelToolingApiActions=false, invalidateCoupledProjects=false, modelAsProjectDependency=false, resilientModelBuilding=false}
+Invalidating in-memory cache of D:\code\github\deskoh\jackson-issue\.gradle\9.2.1\fileHashes\fileHashes.bin
+Invalidating in-memory cache of D:\code\github\deskoh\jackson-issue\.gradle\9.2.1\fileHashes\resourceHashesCache.bin
+Now considering [D:\code\github\deskoh\jackson-issue] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'D:\code\github\deskoh\jackson-issue\settings.gradle'.
+Projects loaded. Root project using build file 'D:\code\github\deskoh\jackson-issue\build.gradle'.
+Included projects: [root project 'jackson-issue']
+
+> Configure project :
+Evaluating root project 'jackson-issue' using build file 'D:\code\github\deskoh\jackson-issue\build.gradle'.
+Invalidating in-memory cache of C:\Users\desko\.gradle\caches\journal-1\file-access.bin
+Invalidating in-memory cache of C:\Users\desko\.gradle\caches\9.2.1\fileHashes\fileHashes.bin
+Invalidating in-memory cache of C:\Users\desko\.gradle\caches\9.2.1\fileHashes\resourceHashesCache.bin
+Resolved plugin [id: 'java']
+All projects evaluated.
+Task name matched 'compileTestJava'
+Selected primary task 'compileTestJava' from project :
+Tasks to be executed: [task ':compileJava', task ':processResources', task ':classes', task ':compileTestJava']
+Tasks that were excluded: []
+Resolve mutations for :compileJava (Thread[#909,Execution worker,5,main]) started.
+:compileJava (Thread[#909,Execution worker,5,main]) started.
+
+> Task :compileJava
+Caching disabled for task ':compileJava' because:
+  Build cache is disabled
+Task ':compileJava' is not up-to-date because:
+  One or more additional actions for task ':compileJava' have changed.
+The input changes require a full rebuild for incremental task ':compileJava'.
+Compilation mode: in-process compilation
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain 'C:\Program Files\Eclipse Adoptium\jdk-21.0.3.9-hotspot'.
+Compiling with JDK Java compiler API.
+Class dependency analysis for incremental compilation took 0.011 secs.
+Created classpath snapshot for incremental compilation in 0.003 secs.
+Resolve mutations for :processResources (Thread[#909,Execution worker,5,main]) started.
+:processResources (Thread[#909,Execution worker,5,main]) started.
+
+> Task :processResources UP-TO-DATE
+Caching disabled for task ':processResources' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':processResources' as it is up-to-date.
+Resolve mutations for :classes (Thread[#909,Execution worker,5,main]) started.
+:classes (Thread[#909,Execution worker,5,main]) started.
+
+> Task :classes
+Skipping task ':classes' as it has no actions.
+Resolve mutations for :compileTestJava (Thread[#909,Execution worker,5,main]) started.
+:compileTestJava (Thread[#909,Execution worker,5,main]) started.
+
+> Task :compileTestJava
+Caching disabled for task ':compileTestJava' because:
+  Build cache is disabled
+Task ':compileTestJava' is not up-to-date because:
+  One or more additional actions for task ':compileTestJava' have changed.
+The input changes require a full rebuild for incremental task ':compileTestJava'.
+Compilation mode: in-process compilation
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain 'C:\Program Files\Eclipse Adoptium\jdk-21.0.3.9-hotspot'.
+Compiling with JDK Java compiler API.
+Class dependency analysis for incremental compilation took 0.005 secs.
+Created classpath snapshot for incremental compilation in 0.006 secs.
+
+BUILD SUCCESSFUL in 3s
+3 actionable tasks: 2 executed, 1 up-to-date
+Watched directory hierarchies: [D:\code\github\deskoh\jackson-issue]
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.2.1/userguide/configuration_cache_enabling.html
