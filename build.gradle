@@ -1,7 +1,5 @@
 plugins {
     id 'java'
-    // id 'org.springframework.boot' version '4.0.5'
-    id 'org.springframework.boot' version '3.5.14'
 }
 
 group = 'com.deskoh'
@@ -28,11 +26,6 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.21.2'
     implementation 'com.fasterxml.jackson.core:jackson-annotations:2.21'
 
-    // compileOnly 'org.projectlombok:lombok:1.18.44'
-    // annotationProcessor 'org.projectlombok:lombok:1.18.44'
-
-    // testCompileOnly 'org.projectlombok:lombok:1.18.44'
-    // testAnnotationProcessor 'org.projectlombok:lombok:1.18.44'
     testImplementation 'org.junit.jupiter:junit-jupiter:6.0.3'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher:6.0.3'
 }
@@ -40,4 +33,9 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
     systemProperty 'spring.profiles.active', 'test'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs << "-parameters"
+    println "Compiler args for ${it.name}: ${it.options.compilerArgs}"
 }
